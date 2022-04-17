@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo '\033[34mHello\033[0m \033[33mcolorful\033[0m \033[35mworld!\033[0m'
                 bat 'dir'
-                echo '%cd%'
+                bat '%cd%'
             }
         }
     }
