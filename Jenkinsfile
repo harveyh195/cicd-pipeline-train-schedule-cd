@@ -16,5 +16,12 @@ pipeline {
                 bat 'echo %cd%'
             }
         }
+        stage ('Invoke_pipeline') {
+            steps {
+                build job: '45', parameters: [
+                string(name: 'param1', value: "value1")
+                ]
+            }
+        }
     }
 }
